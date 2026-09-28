@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>CineBook | Movie Ticket Booking</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span class="logo-icon">🎬</span>
+            <span>Cine<span>Book</span></span>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#movies">Movies</a>
+            <a href="#booking">Book Tickets</a>
+        </nav>
+
+        <button class="login-nav-btn" id="openLogin">
+            Sign In
+        </button>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="hero-small">
+                YOUR CINEMA EXPERIENCE
+            </p>
+
+            <h1>
+                YOUR MOVIE.<br>
+                <span>YOUR EXPERIENCE.</span>
+            </h1>
+
+            <p class="hero-description">
+                Discover the latest movies, choose your favourite seats,
+                and enjoy a seamless cinema experience.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#movies" class="primary-btn">
+                    Browse Movies →
+                </a>
+
+                <button class="secondary-btn" id="heroLogin">
+                    Sign In
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="hero-decoration">
+
+            <div class="ticket-shape">
+
+                <div class="ticket-icon">
+                    🎟️
+                </div>
+
+                <h3>
+                    CINEMA
+                </h3>
+
+                <p>
+                    EXPERIENCE
+                </p>
+
+                <div class="ticket-line"></div>
+
+                <span>
+                    CINEBOOK
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MOVIES ================= -->
+
+    <section class="movies-section" id="movies">
+
+        <div class="section-heading">
+
+            <div>
+                <p class="section-number">
+                    01 — MOVIES
+                </p>
+
+                <h2>
+                    Now Showing
+                </h2>
+
+                <p class="section-subtitle">
+                    Choose a movie and start your experience.
+                </p>
+            </div>
+
+            <div class="movie-controls">
+
+                <input
+                    type="text"
+                    id="searchMovie"
+                    placeholder="Search movie..."
+                >
+
+                <select id="genreFilter">
+
+                    <option value="all">
+                        All Genres
+                    </option>
+
+                    <option value="action">
+                        Action
+                    </option>
+
+                    <option value="comedy">
+                        Comedy
+                    </option>
+
+                    <option value="drama">
+                        Drama
+                    </option>
+
+                    <option value="sci-fi">
+                        Sci-Fi
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <div class="movie-grid" id="movieGrid">
+
+            <!-- MOVIE 1 -->
+
+            <article class="movie-card"
+                data-title="Avengers Endgame"
+                data-genre="action">
+
+                <div class="movie-image">
+
+                    <img
+                        src="images/movie1.jpg"
+                        alt="Avengers Endgame">
+
+                    <span class="movie-rating">
+                        ★ 9.2
+                    </span>
+
+                </div>
+
+                <div class="movie-info">
+
+                    <p class="movie-genre">
+                        ACTION
+                    </p>
+
+                    <h3>
+                        Avengers Endgame
+                    </h3>
+
+                    <div class="movie-bottom">
+
+                        <span class="movie-price">
+                            ₹250
+                        </span>
+
+                        <button
+                            class="book-btn"
+                            data-movie="Avengers Endgame"
+                            data-price="250">
+
+                            Book Now
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- MOVIE 2 -->
+
+            <article class="movie-card"
+                data-title="Interstellar"
+                data-genre="sci-fi">
+
+                <div class="movie-image">
+
+                    <img
+                        src="images/movie2.jpg"
+                        alt="Interstellar">
+
+                    <span class="movie-rating">
+                        ★ 9.0
+                    </span>
+
+                </div>
+
+                <div class="movie-info">
+
+                    <p class="movie-genre">
+                        SCI-FI
+                    </p>
+
+                    <h3>
+                        Interstellar
+                    </h3>
+
+                    <div class="movie-bottom">
+
+                        <span class="movie-price">
+                            ₹280
+                        </span>
+
+                        <button
+                            class="book-btn"
+                            data-movie="Interstellar"
+                            data-price="280">
+
+                            Book Now
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- MOVIE 3 -->
+
+            <article class="movie-card"
+                data-title="Joker"
+                data-genre="drama">
+
+                <div class="movie-image">
+
+                    <img
+                        src="images/movie3.jpg"
+                        alt="Joker">
+
+                    <span class="movie-rating">
+                        ★ 8.8
+                    </span>
+
+                </div>
+
+                <div class="movie-info">
+
+                    <p class="movie-genre">
+                        DRAMA
+                    </p>
+
+                    <h3>
+                        Joker
+                    </h3>
+
+                    <div class="movie-bottom">
+
+                        <span class="movie-price">
+                            ₹220
+                        </span>
+
+                        <button
+                            class="book-btn"
+                            data-movie="Joker"
+                            data-price="220">
+
+                            Book Now
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- MOVIE 4 -->
+
+            <article class="movie-card"
+                data-title="Deadpool"
+                data-genre="comedy">
+
+                <div class="movie-image">
+
+                    <img
+                        src="images/movie4.jpg"
+                        alt="Deadpool">
+
+                    <span class="movie-rating">
+                        ★ 8.5
+                    </span>
+
+                </div>
+
+                <div class="movie-info">
+
+                    <p class="movie-genre">
+                        COMEDY
+                    </p>
+
+                    <h3>
+                        Deadpool
+                    </h3>
+
+                    <div class="movie-bottom">
+
+                        <span class="movie-price">
+                            ₹240
+                        </span>
+
+                        <button
+                            class="book-btn"
+                            data-movie="Deadpool"
+                            data-price="240">
+
+                            Book Now
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- MOVIE 5 -->
+
+            <article class="movie-card"
+                data-title="Spider-Man"
+                data-genre="action">
+
+                <div class="movie-image">
+
+                    <img
+                        src="images/movie5.jpg"
+                        alt="Spider-Man">
+
+                    <span class="movie-rating">
+                        ★ 8.7
+                    </span>
+
+                </div>
+
+                <div class="movie-info">
+
+                    <p class="movie-genre">
+                        ACTION
+                    </p>
+
+                    <h3>
+                        Spider-Man
+                    </h3>
+
+                    <div class="movie-bottom">
+
+                        <span class="movie-price">
+                            ₹260
+                        </span>
+
+                        <button
+                            class="book-btn"
+                            data-movie="Spider-Man"
+                            data-price="260">
+
+                            Book Now
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- MOVIE 6 -->
+
+            <article class="movie-card"
+                data-title="The Batman"
+                data-genre="action">
+
+                <div class="movie-image">
+
+                    <img
+                        src="images/movie6.jpg"
+                        alt="The Batman">
+
+                    <span class="movie-rating">
+                        ★ 8.9
+                    </span>
+
+                </div>
+
+                <div class="movie-info">
+
+                    <p class="movie-genre">
+                        ACTION
+                    </p>
+
+                    <h3>
+                        The Batman
+                    </h3>
+
+                    <div class="movie-bottom">
+
+                        <span class="movie-price">
+                            ₹270
+                        </span>
+
+                        <button
+                            class="book-btn"
+                            data-movie="The Batman"
+                            data-price="270">
+
+                            Book Now
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= BOOKING ================= -->
+
+    <section class="booking-section" id="booking">
+
+        <div class="booking-container">
+
+            <div class="booking-header">
+
+                <p class="section-number">
+                    02 — BOOK YOUR TICKETS
+                </p>
+
+                <h2>
+                    Make Your Selection
+                </h2>
+
+            </div>
+
+
+            <!-- DATE -->
+
+            <div class="booking-step">
+
+                <div class="step-title">
+
+                    <span>
+                        01
+                    </span>
+
+                    <h3>
+                        Select Date
+                    </h3>
+
+                </div>
+
+                <div class="date-options">
+
+                    <button class="date-btn active">
+                        <strong>29</strong>
+                        SEP
+                    </button>
+
+                    <button class="date-btn">
+                        <strong>30</strong>
+                        SEP
+                    </button>
+
+                    <button class="date-btn">
+                        <strong>01</strong>
+                        OCT
+                    </button>
+
+                    <button class="date-btn">
+                        <strong>02</strong>
+                        OCT
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- SHOW TIME -->
+
+            <div class="booking-step">
+
+                <div class="step-title">
+
+                    <span>
+                        02
+                    </span>
+
+                    <h3>
+                        Select Show Time
+                    </h3>
+
+                </div>
+
+                <div class="time-options">
+
+                    <button class="time-btn">
+                        10:30 AM
+                    </button>
+
+                    <button class="time-btn active">
+                        01:30 PM
+                    </button>
+
+                    <button class="time-btn">
+                        05:30 PM
+                    </button>
+
+                    <button class="time-btn">
+                        09:00 PM
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- SEATS -->
+
+            <div class="booking-step">
+
+                <div class="step-title">
+
+                    <span>
+                        03
+                    </span>
+
+                    <h3>
+                        Select Your Seats
+                    </h3>
+
+                </div>
+
+
+                <div class="screen">
+                    SCREEN
+                </div>
+
+
+                <div class="seat-legend">
+
+                    <div>
+                        <span class="legend-seat available"></span>
+                        Available
+                    </div>
+
+                    <div>
+                        <span class="legend-seat selected"></span>
+                        Selected
+                    </div>
+
+                    <div>
+                        <span class="legend-seat occupied"></span>
+                        Occupied
+                    </div>
+
+                </div>
+
+
+                <div class="seat-layout">
+
+                    <!-- ROW A -->
+
+                    <div class="seat-row">
+
+                        <span class="row-label">A</span>
+
+                        <button class="seat">A1</button>
+                        <button class="seat">A2</button>
+                        <button class="seat occupied">A3</button>
+                        <button class="seat">A4</button>
+
+                        <span class="seat-gap"></span>
+
+                        <button class="seat">A5</button>
+                        <button class="seat">A6</button>
+                        <button class="seat occupied">A7</button>
+                        <button class="seat">A8</button>
+
+                    </div>
+
+
+                    <!-- ROW B -->
+
+                    <div class="seat-row">
+
+                        <span class="row-label">B</span>
+
+                        <button class="seat">B1</button>
+                        <button class="seat">B2</button>
+                        <button class="seat">B3</button>
+                        <button class="seat">B4</button>
+
+                        <span class="seat-gap"></span>
+
+                        <button class="seat">B5</button>
+                        <button class="seat occupied">B6</button>
+                        <button class="seat">B7</button>
+                        <button class="seat">B8</button>
+
+                    </div>
+
+
+                    <!-- ROW C -->
+
+                    <div class="seat-row">
+
+                        <span class="row-label">C</span>
+
+                        <button class="seat occupied">C1</button>
+                        <button class="seat">C2</button>
+                        <button class="seat">C3</button>
+                        <button class="seat">C4</button>
+
+                        <span class="seat-gap"></span>
+
+                        <button class="seat">C5</button>
+                        <button class="seat">C6</button>
+                        <button class="seat">C7</button>
+                        <button class="seat occupied">C8</button>
+
+                    </div>
+
+
+                    <!-- ROW D -->
+
+                    <div class="seat-row">
+
+                        <span class="row-label">D</span>
+
+                        <button class="seat">D1</button>
+                        <button class="seat">D2</button>
+                        <button class="seat">D3</button>
+                        <button class="seat">D4</button>
+
+                        <span class="seat-gap"></span>
+
+                        <button class="seat">D5</button>
+                        <button class="seat occupied">D6</button>
+                        <button class="seat">D7</button>
+                        <button class="seat">D8</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SUMMARY -->
+
+            <div class="booking-summary">
+
+                <div class="summary-info">
+
+                    <p>
+                        Movie
+                    </p>
+
+                    <strong id="summaryMovie">
+                        Select a movie
+                    </strong>
+
+                </div>
+
+                <div class="summary-info">
+
+                    <p>
+                        Date
+                    </p>
+
+                    <strong id="summaryDate">
+                        29 SEP
+                    </strong>
+
+                </div>
+
+                <div class="summary-info">
+
+                    <p>
+                        Time
+                    </p>
+
+                    <strong id="summaryTime">
+                        01:30 PM
+                    </strong>
+
+                </div>
+
+                <div class="summary-info">
+
+                    <p>
+                        Seats
+                    </p>
+
+                    <strong id="summarySeats">
+                        -
+                    </strong>
+
+                </div>
+
+                <div class="summary-total">
+
+                    <p>
+                        Total
+                    </p>
+
+                    <strong id="totalPrice">
+                        ₹0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="confirm-btn"
+                id="confirmBooking">
+
+                Confirm Booking →
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= LOGIN MODAL ================= -->
+
+    <div class="modal-overlay" id="loginModal">
+
+        <div class="login-modal">
+
+            <button
+                class="close-modal"
+                id="closeLogin">
+
+                ×
+
+            </button>
+
+            <div class="login-icon">
+                🎬
+            </div>
+
+            <p class="section-number">
+                WELCOME TO CINEBOOK
+            </p>
+
+            <h2>
+                Sign In
+            </h2>
+
+            <p class="login-description">
+                Sign in to book your favourite movies.
+            </p>
+
+
+            <form id="loginForm">
+
+                <label>
+                    Name
+                </label>
+
+                <input
+                    type="text"
+                    id="userName"
+                    placeholder="Enter your name"
+                    required
+                >
+
+
+                <label>
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="userEmail"
+                    placeholder="Enter your email"
+                    required
+                >
+
+
+                <label>
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="userPassword"
+                    placeholder="Enter password"
+                    required
+                >
+
+
+                <button
+                    type="submit"
+                    class="login-submit">
+
+                    Sign In →
+
+                </button>
+
+            </form>
+
+            <p class="demo-text">
+                Demo login — no real account is created.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= CONFIRMATION MODAL ================= -->
+
+    <div class="modal-overlay" id="confirmationModal">
+
+        <div class="confirmation-modal">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <p class="section-number">
+                CINEBOOK
+            </p>
+
+            <h2>
+                Booking Confirmed!
+            </h2>
+
+            <p>
+                Your movie tickets have been booked successfully.
+            </p>
+
+            <div class="confirmation-details">
+
+                <p>
+                    <span>Movie</span>
+                    <strong id="confirmMovie"></strong>
+                </p>
+
+                <p>
+                    <span>Date</span>
+                    <strong id="confirmDate"></strong>
+                </p>
+
+                <p>
+                    <span>Time</span>
+                    <strong id="confirmTime"></strong>
+                </p>
+
+                <p>
+                    <span>Seats</span>
+                    <strong id="confirmSeats"></strong>
+                </p>
+
+                <p>
+                    <span>Total</span>
+                    <strong id="confirmTotal"></strong>
+                </p>
+
+            </div>
+
+            <button
+                class="close-confirmation"
+                id="closeConfirmation">
+
+                Done
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            🎬 CineBook
+        </div>
+
+        <p>
+            Your movie. Your experience.
+        </p>
+
+        <p class="copyright">
+            © 2026 CineBook. Built with HTML, CSS & JavaScript.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
